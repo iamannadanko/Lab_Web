@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Рядки, що біжать — Завдання 4.2</title>
+</head>
+<body>
+
+<!-- 1. Текст та рисунки у рядку коливаються -->
+<marquee direction="up" behavior="alternate" bgcolor="#ffcccc" height="200" width="100%">
+    <font color="#000066" face="Verdana" size="4"><b>Текст коливається вгору-вниз</b></font><br>
+    <img src="images/1.jpg" alt="Малюнок 1" width="200">
+</marquee>
+
+<!-- 2. Послідовність рисунків пробігає знизу догори та з’являється знову -->
+<marquee direction="up" behavior="scroll" bgcolor="#ccffcc" height="300" width="100%">
+    <img src="images/2.jpg" alt="Малюнок 2" width="200"><br>
+    <img src="images/3.jpg" alt="Малюнок 3" width="200"><br>
+    <font color="#660000" face="Tahoma" size="4">Пробігає знизу догори</font>
+</marquee>
+
+<!-- 3. Послідовність рисунків пробігає згори до низу із зупинкою -->
+<marquee direction="up" behavior="slide" bgcolor="#fff0b3" height="400" width="100%">
+    <img src="images/4.jpg" alt="Малюнок 4" width="200"><br>
+    <img src="images/5.jpg" alt="Малюнок 5" width="200"><br>
+    <font color="#003300" face="Georgia" size="4">Пробігає згори до низу і зупиняється</font>
+</marquee> 
+
+<!-- 4. Рядок із запізненням 100 мс -->
+<marquee direction="up" behavior="scroll" bgcolor="#ccccff" height="400" width="100%" scrolldelay="100">
+    <img src="images/6.jpg" alt="Малюнок 6" width="200"><br>
+    <img src="images/7.jpg" alt="Малюнок 7" width="200"><br>
+    <font color="#800000" face="Arial" size="4">Рух вгору із запізненням 100 мс</font>
+</marquee>
+
+<!-- 5. Рядок із запізненням 200 мс -->
+<marquee direction="down" behavior="scroll" bgcolor="#b3e0ff" height="300" width="100%" scrolldelay="200">
+    <img src="images/8.jpg" alt="Малюнок 8" width="200"><br>
+    <img src="images/9.jpg" alt="Малюнок 9" width="200"><br>
+    <font color="#003366" face="Comic Sans MS" size="4">Рух вниз із запізненням 200 мс</font>
+</marquee>
+
+</body>
+</html>
