@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Сенсорне зображення</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .container {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 15px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Мої улюблені книги</h1>
+    
+    <div class="container">
+        <map name="booksMap">
+            <area shape="rect" coords="1,99,94,606" 
+                  href="#" alt="Перша книга" 
+                  title="Назва: 'Шлях до успіху'&#10;Автор: Іван Франко&#10;Рік: 2020&#10;Жанр: Мотиваційна література">
+            
+            <area shape="rect" coords="94,101,201,609" 
+                  href="#" alt="Друга книга" 
+                  title="Назва: 'Таємниці всесвіту'&#10;Автор: Леся Українка&#10;Рік: 2021&#10;Жанр: Наукова фантастика">
+            
+            <area shape="rect" coords="206,103,517,610" 
+                  href="#" alt="Третя книга" 
+                  title="Назва: 'Подорож у часі'&#10;Автор: Тарас Шевченко&#10;Рік: 2022&#10;Жанр: Пригоди">
+        </map>
+
+        <img src="images/Книги.png" 
+             alt="Три книги" usemap="#booksMap" 
+             style="border: 3px solid white; border-radius: 10px;">
+        
+        <p style="margin-top: 20px; font-size: 18px;">
+            Наведіть курсор на різні книги, щоб дізнатися більше інформації
+        </p>
+    </div>
+</body>
+</html>

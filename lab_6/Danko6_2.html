@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Навігаційна карта</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #fff0f5;
+        }
+        h1 {
+            color: #c71585;
+        }
+        .navigation {
+            margin: 20px 0;
+        }
+        .navigation a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #db7093;
+            font-weight: bold;
+        }
+        .navigation a:hover {
+            color: #c71585;
+            text-decoration: underline;
+        }
+        p {
+            color: #8b4789;
+        }
+    </style>
+</head>
+<body>
+    <h1>Моя навігаційна карта</h1>
+
+    <!-- Картирування зображення -->
+    <map name="navigationMap">
+        <area shape="poly" coords="380,211,381,133,482,211" href="DankoLab2-3.html" 
+              alt="Домашня сторінка" title="Про мене">
+        <area shape="rect" coords="251,132,380,210" href="DankoLab5.html" 
+              alt="Гіперпосилання" title="Мої гіперпосилання">
+        <area shape="circle" coords="313,75,58" 
+              href="Danko6_1.html" alt="Батьківщина" title="Моя Батьківщина">
+    </map>
+
+    <img src="images/Фігури.png"
+         alt="Навігаційна карта" usemap="#navigationMap" border="2" style="border-color: #db7093;">
+    
+    <p>Натисніть на різні фігури на зображенні для переходу до відповідних сторінок</p>
+</body>
+</html>
