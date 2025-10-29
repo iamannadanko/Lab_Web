@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Книжкова форма</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #8B4513;
+            color: #FFF8DC;
+        }
+        h2 {
+            text-align: center;
+            color: #FFD700;
+        }
+        form {
+            background: #A0522D;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .form-group {
+            margin: 15px 0;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #FFD700;
+        }
+        input[type="text"], input[type="password"], textarea, select {
+            width: 100%;
+            padding: 5px;
+            margin: 5px 0;
+            border: 1px solid #8B4513;
+            background-color: #FFF8DC;
+        }
+        input[type="submit"], input[type="reset"], input[type="button"] {
+            background-color: #8B0000;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover {
+            background-color: #B22222;
+        }
+        .checkbox-group, .radio-group {
+            margin: 8px 0;
+        }
+        small {
+            color: #FFEBCD;
+        }
+    </style>
+</head>
+<body>
+    <h2>Книжкова анкета читача</h2>
+    
+    <form action="success.html" method="post">
+        <!-- Текстове поле -->
+        <div class="form-group">
+            <label for="name">Ваше ім'я:</label>
+            <input type="text" id="name" name="name" placeholder="Введіть ваше ім'я">
+        </div>
+
+        <!-- Пароль -->
+        <div class="form-group">
+            <label for="password">Пароль для бібліотеки:</label>
+            <input type="password" id="password" name="password" placeholder="Введіть пароль">
+        </div>
+
+        <!-- Текстова область -->
+        <div class="form-group">
+            <label for="comments">Улюблені книги та автори:</label>
+            <textarea id="comments" name="comments" cols="50" rows="4" placeholder="Опишіть ваші літературні вподобання..."></textarea>
+        </div>
+
+        <!-- Випадаючий список -->
+        <div class="form-group">
+            <label for="genre">Улюблений жанр:</label>
+            <select id="genre" name="genre">
+                <option value="fantasy">Фентезі</option>
+                <option value="detective">Детектив</option>
+                <option value="romance" selected>Роман</option>
+                <option value="scifi">Наукова фантастика</option>
+                <option value="classic">Класика</option>
+            </select>
+        </div>
+
+        <!-- Багато виборний список -->
+        <div class="form-group">
+            <label for="authors">Улюблені автори:</label>
+            <select id="authors" name="authors" size="4" multiple>
+                <option value="Gerritsen">Тесс Ґеррітсен </option>
+                <option value="Grange">Жан-Крістоф Ґранже</option>
+                <option value="Armentrout">Дженніфер Лінн Арментраут</option>
+                <option value="rowling">Джоан Роулінг</option>
+                <option value="tolkien">Дж. Р. Р. Толкін</option>
+                <option value="christie">Агата Крісті</option>
+            </select>
+            <small>Утримуйте Ctrl для вибору декількох авторів</small>
+        </div>
+
+        <!-- Прапорці -->
+        <div class="form-group">
+            <label>Формати книг, які ви читаєте:</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="format" value="paper" checked> Паперові</label>
+                <label><input type="checkbox" name="format" value="ebook"> Електронні</label>
+                <label><input type="checkbox" name="format" value="audio"> Аудіокниги</label>
+            </div>
+        </div>
+
+        <!-- Радіокнопки -->
+        <div class="form-group">
+            <label>Як часто ви читаєте?</label>
+            <div class="radio-group">
+                <label><input type="radio" name="frequency" value="daily"> Щодня</label>
+                <label><input type="radio" name="frequency" value="weekly" checked> Кілька разів на тиждень</label>
+                <label><input type="radio" name="frequency" value="monthly"> Кілька разів на місяць</label>
+            </div>
+        </div>
+
+        <!-- Поле для файлів -->
+        <div class="form-group">
+            <label for="file">Додати рецензію (файл):</label>
+            <input type="file" id="file" name="file" accept=".pdf,.doc,.docx,.txt">
+        </div>
+
+        <!-- Кнопки -->
+        <div class="form-group">
+            <label>Дії:</label><br>
+            <input type="submit" value="Зберегти анкету">
+            <input type="reset" value="Очистити форму">
+            <input type="button" value="Книжкова цитата" onclick="alert('Книги - це кораблі думок, що плавають по хвилях часу. - Френсіс Бекон')">
+        </div>
+    </form>
+</body>
+</html> 

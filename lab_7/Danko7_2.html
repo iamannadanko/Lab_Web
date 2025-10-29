@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Анкета</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+        form {
+            background: white;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            vertical-align: top;
+        }
+        td:first-child {
+            width: 30%;
+            background-color: #f9f9f9;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="tel"], input[type="email"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        .interests {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 5px;
+        }
+        .interests input {
+            width: 100%;
+        }
+        .buttons {
+            text-align: center;
+            margin-top: 30px;
+        }
+        input[type="submit"], input[type="reset"] {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            margin: 0 10px;
+            font-size: 14px;
+        }
+        input[type="reset"] {
+            background-color: #e74c3c;
+        }
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+        input[type="reset"]:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+    <h1>Анкета</h1>
+    
+    <form action="success.html" method="post">
+        <table>
+            <tr>
+                <td>1. Прізвище</td>
+                <td><input type="text" name="surname" placeholder="Введіть ваше прізвище"></td>
+            </tr>
+            <tr>
+                <td>2. Ім'я, по батькові</td>
+                <td><input type="text" name="fullname" placeholder="Введіть ім'я та по батькові"></td>
+            </tr>
+            <tr>
+                <td>3. Число і рік народження</td>
+                <td><input type="text" name="birthdate" placeholder="Наприклад: 15.05.2000"></td>
+            </tr>
+            <tr>
+                <td>4. Домашня адреса</td>
+                <td><input type="text" name="address" placeholder="Введіть повну адресу"></td>
+            </tr>
+            <tr>
+                <td>5. Місце навчання (роботи)</td>
+                <td><input type="text" name="workplace" placeholder="Назва навчального закладу або роботи"></td>
+            </tr>
+            <tr>
+                <td>6. Домашній (робочий) телефон</td>
+                <td><input type="tel" name="phone" placeholder="+38 (0XX) XXX-XX-XX"></td>
+            </tr>
+            <tr>
+                <td>7. E-mail</td>
+                <td><input type="email" name="email" placeholder="example@email.com"></td>
+            </tr>
+            <tr>
+                <td>8. Область наукових інтересів</td>
+                <td>
+                    <div class="interests">
+                        <input type="text" name="interest1" placeholder="1. ______">
+                        <input type="text" name="interest2" placeholder="2. ______">
+                        <input type="text" name="interest3" placeholder="3. ______">
+                        <input type="text" name="interest4" placeholder="4. ______">
+                        <input type="text" name="interest5" placeholder="5. ______">
+                        <input type="text" name="interest6" placeholder="6. ______">
+                    </div>
+                </td>
+            </tr>
+        </table>
+        
+        <div class="buttons">
+            <input type="reset" value="Відмінити введення">
+            <input type="submit" value="Надіслати дані та перейти до 2 етапу реєстрації">
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма замовлення товару</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 40px;
+            font-size: 2.2em;
+            font-weight: 300;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin: 25px 0;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border-left: 4px solid #667eea;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .form-group:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        label {
+            display: block;
+            margin-bottom: 12px;
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        input[type="text"], input[type="number"], textarea, select {
+            width: 100%;
+            padding: 12px 16px;
+            margin: 8px 0;
+            border: 2px solid #e8e8e8;
+            border-radius: 10px;
+            box-sizing: border-box;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background: #f8f9fa;
+        }
+        input[type="text"]:focus, input[type="number"]:focus, textarea:focus, select:focus {
+            border-color: #667eea;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+            outline: none;
+        }
+        select {
+            background-image: linear-gradient(45deg, transparent 50%, #667eea 50%),
+                              linear-gradient(135deg, #667eea 50%, transparent 50%);
+            background-position: calc(100% - 20px) center, calc(100% - 15px) center;
+            background-size: 5px 5px, 5px 5px;
+            background-repeat: no-repeat;
+            appearance: none;
+        }
+        .checkbox-group, .radio-group {
+            margin: 15px 0;
+        }
+        .checkbox-group label, .radio-group label {
+            display: inline-flex;
+            align-items: center;
+            margin-right: 25px;
+            font-weight: 500;
+            color: #5a6c7d;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .checkbox-group label:hover, .radio-group label:hover {
+            color: #667eea;
+        }
+        input[type="checkbox"], input[type="radio"] {
+            margin-right: 10px;
+            transform: scale(1.2);
+            accent-color: #667eea;
+        }
+        input[type="submit"], input[type="reset"] {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 35px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            margin: 0 10px;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        input[type="reset"] {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+        }
+        input[type="submit"]:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+        }
+        input[type="reset"]:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.6);
+        }
+        .buttons {
+            text-align: center;
+            margin-top: 40px;
+        }
+        small {
+            color: #7f8c8d;
+            font-style: italic;
+            display: block;
+            margin-top: 8px;
+        }
+        .product-option {
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .product-option:last-child {
+            border-bottom: none;
+        }
+        .price-tag {
+            color: #27ae60;
+            font-weight: 600;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>🛍️ Форма замовлення товару</h2>
+        
+        <form action="success.html" method="post">
+            <!-- Номер банківського рахунку -->
+            <div class="form-group">
+                <label for="account">💳 Номер банківського рахунку</label>
+                <input type="text" id="account" name="account" placeholder="Введіть номер вашого рахунку" required>
+            </div>
+
+            <!-- Особистий номер користувача -->
+            <div class="form-group">
+                <label for="user_id">👤 Особистий номер користувача</label>
+                <input type="text" id="user_id" name="user_id" placeholder="Введіть ваш особистий номер" required>
+            </div>
+
+            <!-- Список товарів -->
+            <div class="form-group">
+                <label for="products">📦 Оберіть товари</label>
+                <select id="products" name="products" size="6" multiple>
+                    <option value="laptop" class="product-option">💻 Ноутбук Dell Inspiron <span class="price-tag">25,000 грн</span></option>
+                    <option value="phone" class="product-option">📱 Смартфон Samsung Galaxy <span class="price-tag">15,000 грн</span></option>
+                    <option value="tablet" class="product-option">📟 Планшет iPad Air <span class="price-tag">20,000 грн</span></option>
+                    <option value="monitor" class="product-option">🖥️ Монітор 27" LG <span class="price-tag">8,000 грн</span></option>
+                    <option value="keyboard" class="product-option">⌨️ Механічна клавіатура <span class="price-tag">2,500 грн</span></option>
+                    <option value="mouse" class="product-option">🐭 Бездротова мишка <span class="price-tag">800 грн</span></option>
+                    <option value="headphones" class="product-option">🎧 Навушники Sony <span class="price-tag">3,000 грн</span></option>
+                    <option value="printer" class="product-option">🖨️ Принтер HP <span class="price-tag">6,000 грн</span></option>
+                </select>
+                <small>🔸 Утримуйте Ctrl (Cmd на Mac) для вибору декількох товарів</small>
+            </div>
+
+            <!-- Коментарі користувача -->
+            <div class="form-group">
+                <label for="comments">💬 Коментарі до замовлення</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Введіть ваші коментарі, побажання або особливі вимоги до замовлення..."></textarea>
+            </div>
+
+            <!-- Вид оплати -->
+            <div class="form-group">
+                <label>💰 Вид оплати</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="payment" value="cash" checked> 💵 Готівковий розрахунок</label>
+                    <label><input type="radio" name="payment" value="cashless"> 🏦 Безготівковий розрахунок</label>
+                </div>
+            </div>
+
+            <!-- Додаткова інформація -->
+            <div class="form-group">
+                <label>📋 Додаткова інформація для відповіді</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="info_balance" value="yes"> 💰 Дані про залишки на рахунку</label>
+                    <label><input type="checkbox" name="info_payments" value="yes"> 📊 Список останніх виплат по рахунку</label>
+                </div>
+            </div>
+
+            <!-- Кнопки -->
+            <div class="buttons">
+                <input type="submit" value="🚀 Відправити замовлення">
+                <input type="reset" value="🗑️ Очистити форму">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
