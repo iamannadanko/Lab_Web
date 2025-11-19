@@ -1,0 +1,24 @@
+.menu {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.menu:hover {
+    background-color: #45a049;
+}
+
+.small {
+    color: #666666;
+    font-size: 12px;
+    background-color: #f8f8f8;
+    padding: 5px 10px;
+    margin: 3px;
+    border: 1px solid #dddddd;
+    border-left: 3px solid #888888;
+    display: inline-block;
+}
