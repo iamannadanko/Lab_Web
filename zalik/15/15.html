@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Лабораторна 1</title>
+</head>
+<body>
+    <h1>Результати роботи дивіться в консолі (F12) та в модальних вікнах</h1>
+
+    <script>
+        // --- ЗАВДАННЯ 1: Прості числа від 0 до 100 ---
+        console.log("Завдання 1: Прості числа");
+        let i = 2; 
+        while (i <= 100) {
+            let j = 2;
+            let isSimple = true;
+            while (j < i) {
+                if (i % j === 0) {
+                    isSimple = false;
+                    break;
+                }
+                j++;
+            }
+            if (isSimple) console.log(i);
+            i++;
+        }
+
+        // --- ЗАВДАННЯ 2: Парні/непарні від 0 до 10 ---
+        console.log("Завдання 2: Типи чисел");
+        let n = 0;
+        do {
+            if (n === 0) {
+                console.log(n + " – це нуль");
+            } else if (n % 2 === 0) {
+                console.log(n + " – парне число");
+            } else {
+                console.log(n + " – непарне число");
+            }
+            n++;
+        } while (n <= 10);
+
+        // --- ЗАВДАННЯ 3: Ділення 10000 ---
+        let numb = 10000;
+        let counter = 0;
+        while (numb >= 50) {
+            numb = numb / 2;
+            counter++;
+        }
+        let result = numb;
+        console.log("Завдання 3: Result = " + result + ", Counter = " + counter);
+
+        // --- ЗАВДАННЯ 4: Пори року ---
+        let month = prompt("Завдання 4: Введіть номер місяця (1-12)");
+        if (month == 12 || month == 1 || month == 2) alert("Зима");
+        else if (month >= 3 && month <= 5) alert("Весна");
+        else if (month >= 6 && month <= 8) alert("Літо");
+        else if (month >= 9 && month <= 11) alert("Осінь");
+        else alert("Невірно введений місяць");
+
+        // --- ЗАВДАННЯ 5: Фаренгейт ---
+        let tc = prompt("Завдання 5: Введіть температуру в Цельсіях");
+        let tf = (9/5) * tc + 32;
+        alert("Температура за Фаренгейтом: " + tf);
+
+        // --- ЗАВДАННЯ 6: Дні тижня ---
+        let day = prompt("Завдання 6: Введіть число від 1 до 7");
+        if (day == 1) document.write("Понеділок");
+        else if (day == 2) document.write("Вівторок");
+        else if (day == 3) document.write("Середа");
+        else if (day == 4) document.write("Четвер");
+        else if (day == 5) document.write("П'ятниця");
+        else if (day == 6) document.write("Субота");
+        else if (day == 7) document.write("Неділя");
+        else document.write("Помилка введення");
+
+    </script>
+</body>
+</html>

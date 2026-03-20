@@ -1,0 +1,39 @@
+/* 1. Обов'язково для розтягування на весь екран */
+html, body {
+    height: 100%;
+    margin: 0; /* Бажано додати, щоб не було смуг прокрутки */
+}
+
+/* Налаштування блоків */
+.custom-box {
+    /* 2. ДОДАНО: блок має займати всю доступну висоту батька */
+    
+    display: flex;
+    align-items: center;     
+    justify-content: center; 
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    border: 1px solid lightgray; 
+}
+
+/* Кольори */
+.bg-blue { background-color: #4472c4; }
+.bg-yellow { background-color: #ffc000; }
+.bg-red { background-color: #c00000; }
+
+.row {
+    height: 100%; /* Ряд на всю висоту */
+}
+
+.row.no-gutters {
+    margin: 0;
+}
+.row.no-gutters > [class*="col-"] {
+    padding: 0;
+}
+
+/* 3. ВИПРАВЛЕНО: 'c' замінено на англійську, щоб працювало з Bootstrap */
+.container-fluid {
+    height: 100vh; /* Висота контейнера на весь екран */
+}

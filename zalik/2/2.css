@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Налаштування сітки (Grid) */
+.grid-container {
+    display: grid;       /* Вмикаємо Grid */
+    width: 100%;
+    height: 100vh;       /* На всю висоту екрану */
+    /* Колір фону для контейнера про всяк випадок */
+    background-color: #fff; 
+}
+
+/* Стилі для блоків (центрування тексту, кольори) */
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+    border: 1px solid lightgray; /* Вимога №4 */
+}
+
+/* Кольори (Вимога №3) */
+.item-1 { background-color: #4472c4; } /* Синій */
+.item-2 { background-color: #ffc000; } /* Жовтий */
+.item-3 { background-color: #c00000; } /* Червоний */
+
+
+/* --- АДАПТИВНІСТЬ (Вимога №5) --- */
+
+/* Мобільна версія (< 768px).
+   Відображаємо все в одну колонку.
+*/
+@media (max-width: 767px) {
+    .grid-container {
+        /* Одна колонка на всю ширину */
+        grid-template-columns: 1fr;
+        /* Три рядки однакової висоти (1fr = 1 fraction/частина) */
+        grid-template-rows: 1fr 1fr 1fr; 
+    }
+}
+
+/* ПК версія (>= 768px).
+   Складна сітка: 2 колонки, 2 рядки.
+*/
+@media (min-width: 768px) {
+    .grid-container {
+        /* Дві рівні колонки */
+        grid-template-columns: 1fr 1fr;
+        /* Два рівні рядки */
+        grid-template-rows: 1fr 1fr;
+    }
+
+    /* Блок #1 має займати дві колонки (весь верхній рядок) */
+    .item-1 {
+        grid-column: 1 / 3; /* Починається з лінії 1 і закінчується на лінії 3 */
+        /* Або можна написати: grid-column: span 2; */
+    }
+    
+    /* Блоки #2 та #3 стануть автоматично у другий рядок,
+       кожен у свою комірку, тому для них нічого писати не треба. */
+}

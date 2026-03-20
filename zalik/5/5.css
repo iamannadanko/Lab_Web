@@ -1,0 +1,57 @@
+/* Скидання відступів браузера за замовчуванням */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* ЗАГАЛЬНІ НАЛАШТУВАННЯ */
+.grid-container {
+    display: grid;         /* Вмикаємо технологію Grid */
+    height: 100vh;         /* Висота на весь екран */
+    width: 100%;           /* Ширина на весь екран */
+}
+
+/* Стилі для блоків (текст, рамка) */
+.grid-item {
+    display: flex;
+    align-items: center;     
+    justify-content: center; 
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    border: 1px solid lightgray; /* Вимога 4: рамка 1px */
+}
+
+/* Кольори */
+.bg-blue { background-color: #4472c4; }
+.bg-yellow { background-color: #ffc000; }
+.bg-red { background-color: #c00000; }
+
+/* --- ГОЛОВНА ЛОГІКА ЗАВДАННЯ №5 --- */
+
+/* 1. СТИЛІ ДЛЯ МОБІЛЬНИХ (< 768px) */
+/* Це базовий вигляд. Браузер читає це першим. */
+.grid-container {
+    /* Одна колонка на всю ширину */
+    grid-template-columns: 1fr; 
+    /* Три рядки однакової висоти */
+    grid-template-rows: 1fr 1fr 1fr; 
+}
+
+/* 2. ПРАВИЛО @MEDIA ДЛЯ ПК (>= 768px) */
+/* Вимога 5: змінюємо вигляд при ширині від 768px */
+@media (min-width: 768px) {
+    .grid-container {
+        /* Робимо 3 колонки в одному рядку.
+           Співвідношення: 2 частини + 1 частина + 1 частина (в сумі 4).
+           2fr = 50% ширини (для синього)
+           1fr = 25% ширини (для жовтого)
+           1fr = 25% ширини (для червоного)
+        */
+        grid-template-columns: 2fr 1fr 1fr;
+        
+        /* Один рядок на всю висоту */
+        grid-template-rows: 1fr; 
+    }
+}

@@ -1,0 +1,66 @@
+/* Скидання відступів */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* ЗАГАЛЬНІ СТИЛІ (МОБІЛЬНА ВЕРСІЯ ЗА ЗАМОВЧУВАННЯМ) */
+.custom-box {
+    /* --- ВАЖЛИВО ДЛЯ МОБІЛЬНОГО --- */
+    /* Щоб бачити 3 блоки одразу, ділимо 100% екрана на 3 частини */
+    height: 33.33vh; 
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    border: 1px solid lightgray;
+}
+
+/* Кольори */
+.bg-blue { background-color: #4472c4; }
+.bg-yellow { background-color: #ffc000; }
+.bg-red { background-color: #c00000; }
+
+.row.no-gutters { margin: 0; }
+.row.no-gutters > div { padding: 0; }
+
+
+/* --- МОБІЛЬНА ШИРИНА --- */
+.my-col {
+    width: 100%; /* На весь екран по ширині */
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+
+/* --- ВЕРСІЯ ДЛЯ ПК (>= 520px) --- */
+@media (min-width: 520px) {
+    
+    /* 1. Змінюємо висоту на повну для ПК */
+    .custom-box {
+        height: 100vh; /* На ПК вони в рядок, тому хай будуть на всю висоту */
+    }
+
+    /* 2. Налаштовуємо ширину колонок для ПК */
+    
+    /* #1 - 50% ширини (6 колонок) */
+    .block-1 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    /* #2 - 25% ширини (3 колонки) */
+    .block-2 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+
+    /* #3 - 25% ширини (3 колонки) */
+    .block-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}

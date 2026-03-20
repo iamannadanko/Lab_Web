@@ -1,0 +1,32 @@
+/* Базові стилі */
+.custom-box {
+    /* Для мобільного (<768px): 3 блоки, кожен по третині екрана */
+    height: 33.33vh; 
+    display: flex;
+    align-items: center;     
+    justify-content: center; 
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    border: 1px solid lightgray;
+}
+
+/* Кольори */
+.bg-blue { background-color: #4472c4; }
+.bg-yellow { background-color: #ffc000; }
+.bg-red { background-color: #c00000; }
+
+/* Прибираємо відступи */
+.row.no-gutters { margin: 0; }
+.row.no-gutters > [class*="col-"] { padding: 0; }
+
+/* --- АДАПТИВНА ВИСОТА --- */
+
+/* Як тільки екран стає планшетним (>= 768px) або більше:
+   У нас завжди утворюється 2 візуальні ряди блоків.
+   Тому висота кожного блоку стає 50% від висоти екрана. */
+@media (min-width: 768px) {
+    .custom-box {
+        height: 50vh;
+    }
+}

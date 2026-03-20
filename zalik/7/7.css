@@ -1,0 +1,36 @@
+/* Базові стилі для блоків */
+.custom-box {
+    /* Мобільна версія: 3 блоки ділять екран на 3 частини (100 / 3 = 33.33) */
+    height: 33.33vh; 
+    display: flex;
+    align-items: center;     
+    justify-content: center; 
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    border: 1px solid lightgray; /* Вимога: рамка 1px */
+}
+
+/* Кольори фону */
+.bg-blue { background-color: #4472c4; }
+.bg-yellow { background-color: #ffc000; }
+.bg-red { background-color: #c00000; }
+
+/* Прибираємо стандартні відступи Bootstrap */
+.row.no-gutters {
+    margin: 0;
+}
+.row.no-gutters > [class*="col-"] {
+    padding: 0;
+}
+
+/* --- ВИМОГА №5: ВЛАСНЕ @MEDIA ПРАВИЛО --- */
+/* Змінюємо вигляд для екранів шириною від 1200px */
+
+@media (min-width: 1200px) {
+    .custom-box {
+        /* На ПК у нас візуально 2 ряди (синій зверху, інші знизу).
+           Тому висота кожного блоку має стати 50% від екрана. */
+        height: 50vh;
+    }
+}

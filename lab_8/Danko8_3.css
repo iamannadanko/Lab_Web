@@ -1,7 +1,5 @@
 body {
-    background: 
- 
-        url('img/flow.webp') center/cover no-repeat fixed;
+    background:  url('img/flow.webp') center/cover no-repeat fixed;
     font-family: 'Arial', sans-serif;
     max-width: 900px;
     margin: 0 auto;

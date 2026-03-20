@@ -1,0 +1,98 @@
+body {
+    background: url('images/background.jpg') center/cover no-repeat fixed;
+    font-family: 'Georgia', serif;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+p {
+    text-align: justify;
+    font-style: italic;
+    font-size: 16px;
+    text-indent: 40px;
+    margin-left: 5%;
+    margin-right: 5%;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+h1 {
+    font-weight: bold;
+    text-align: center;
+    color: #8b0000;
+    font-style: normal;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin: 15px 0;
+}
+
+.image-right {
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    max-width: 300px;
+}
+
+a:link {
+    color: #27ae60;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:active {
+    color: #0000FF;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #e74c3c;
+    text-decoration: underline;
+}
+
+.navigation {
+    text-align: center;
+    margin: 30px 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.navigation a {
+    margin: 0 15px;
+    font-size: 1.1em;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 15px;
+}
+.bg {
+    position: fixed;
+    inset: 0;
+    background: url('img/1.png') center/cover no-repeat;
+    filter: blur(8px);
+    transform: scale(1.05); /* щоб не було видимих країв */
+    z-index: -1;
+  }

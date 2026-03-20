@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 1</title>
+    <style>
+        * { box-sizing: border-box; }
+        body, html { margin: 0; padding: 0; height: 100%; }
+        
+        .container { /* вкл флексбокс*/
+            display: flex;
+            flex-wrap: wrap;
+            height: 100vh;
+            font-family: sans-serif;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .block {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #ccc;
+        }
+
+        @media (min-width: 1200px) {
+            .block-1 { background-color: #4472C4; width: 100%; height: 55%; }
+            .block-2 { background-color: #FFC000; width: 50%; height: 45%; }
+            .block-3 { background-color: #C00000; width: 50%; height: 45%; }
+        }
+
+        @media (max-width: 1199px) {
+            .block-1 { background-color: #4472C4; width: 100%; height: 40%; }
+            .block-2 { background-color: #FFC000; width: 100%; height: 30%; }
+            .block-3 { background-color: #C00000; width: 100%; height: 30%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="block block-1">#1</div>
+        <div class="block block-2">#2</div>
+        <div class="block block-3">#3</div>
+    </div>
+</body>
+</html>

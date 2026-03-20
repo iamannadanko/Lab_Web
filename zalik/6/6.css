@@ -1,0 +1,37 @@
+/* Базові стилі для блоків */
+.custom-box {
+    /* 1. ДЛЯ МОБІЛЬНОГО (< 1200px) */
+    /* Ділимо екран (100vh) рівно на 3 частини */
+    height: calc(100vh / 3);
+    
+    display: flex;
+    align-items: center;     
+    justify-content: center; 
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    border: 1px solid lightgray;
+    
+    /* Додаємо, щоб рамка не додавала зайву ширину/висоту */
+    box-sizing: border-box; 
+}
+
+/* Кольори */
+.bg-blue { background-color: #4472c4; }
+.bg-yellow { background-color: #ffc000; }
+.bg-red { background-color: #c00000; }
+
+/* Прибираємо відступи */
+.row.no-gutters { margin: 0; }
+.row.no-gutters > div { padding: 0; }
+
+
+/* 2. ДЛЯ ПК (>= 1200px) */
+/* Тут ми ОБОВ'ЯЗКОВО маємо змінити висоту, інакше буде біла дірка знизу */
+@media (min-width: 1200px) {
+    .custom-box {
+        /* На ПК блоки стоять у 2 поверхи.
+           Тому ділимо екран (100vh) рівно на 2 частини */
+        height: 50vh;
+    }
+}

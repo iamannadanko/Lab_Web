@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна 14 - Адаптивні кольори (Fluid)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        /* --- БАЗОВІ СТИЛІ (Загальні для всіх) --- */
+        .block {
+            border: 1px solid gray; /* Рамка 1px сірого кольору (Вимога) */
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+            min-height: 60px; /* Мінімальна висота для вигляду */
+        }
+
+        /* -----------------------------------------------------------
+           1. МОБІЛЬНА ВЕРСІЯ (< 768px)
+           ----------------------------------------------------------- */
+        @media (max-width: 767px) {
+            .block {
+                color: green;         /* Текст зелений */
+                background-color: white; /* Фон білий */
+            }
+        }
+
+        /* -----------------------------------------------------------
+           2. ПЛАНШЕТ (768px - 991px)
+           ----------------------------------------------------------- */
+        @media (min-width: 768px) and (max-width: 991px) {
+            .block { color: black; background-color: white; } /* Скидаємо зелений колір */
+            
+            /* Фарбуємо меню у фіолетовий (світло-бузковий) */
+            .menu-left, .menu-right {
+                background-color: #e0b0ff; 
+            }
+        }
+
+        /* -----------------------------------------------------------
+           3. МАЛИЙ НОУТБУК (992px - 1199px)
+           ----------------------------------------------------------- */
+        @media (min-width: 992px) and (max-width: 1199px) {
+            .block { color: black; background-color: white; }
+            
+            /* Фарбуємо специфічні блоки у рожевий */
+            .header-right, .content, .footer-left {
+                background-color: #ffb6c1; /* Рожевий колір */
+            }
+        }
+
+        /* -----------------------------------------------------------
+           4. ВЕЛИКИЙ ЕКРАН (> 1200px)
+           ----------------------------------------------------------- */
+        @media (min-width: 1200px) {
+            .block { color: black; background-color: white; }
+
+            /* Ліва шапка і правий підвал - Бежеві/Помаранчеві */
+            .header-left, .footer-right {
+                background-color: #ffe699; 
+            }
+
+            /* Особливість скріншота 1: Червоний та Синій текст */
+            .header-right { color: red !important; }
+            .footer-left { color: blue !important; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid text-center mt-3">
+    
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 col-xl-8 block header-left">
+            Ліва частина шапки
+        </div>
+        
+        <div class="col-12 col-md-6 col-lg-8 col-xl-4 block header-right">
+            Права частина шапки
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-lg-2 block menu-left">
+            Ліве меню
+        </div>
+
+        <div class="col-12 col-lg-8 block content">
+            Контент
+        </div>
+
+        <div class="col-12 col-lg-2 block menu-right">
+            Праве меню
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-8 col-xl-4 block footer-left">
+            Ліва частина підвалу
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 col-xl-8 block footer-right">
+            Права частина підвалу
+        </div>
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
